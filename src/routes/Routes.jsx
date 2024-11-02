@@ -11,10 +11,10 @@ const routes = createBrowserRouter([
 
     children: [
       {
-        path: "/",
         // index: true,
+        path: "/",
         element: <Home></Home>,
-        children: [],
+        loader: () => fetch("./categories.json"),
       },
 
       {
@@ -30,4 +30,4 @@ const routes = createBrowserRouter([
   },
 ]);
 
-export default routes;
+export { routes };
