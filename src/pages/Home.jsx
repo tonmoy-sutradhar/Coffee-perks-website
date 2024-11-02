@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import Heading from "../components/Heading";
 import Categories from "../components/Categories";
@@ -23,6 +23,7 @@ const Home = () => {
       {/* Categories tab section */}
       <Categories categories={data}></Categories>
       {/* Dynamic Nested Component */}
+      <Outlet></Outlet>
     </div>
   );
 };
