@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Card = ({ coffee }) => {
   const {
     name,
@@ -17,9 +19,11 @@ const Card = ({ coffee }) => {
 
   return (
     <div className="border-2 border-blue-500 rounded-lg  ">
-      <figure>
-        <img className="w-full h-48 overflow-hidden" src={image} alt="" />
-      </figure>
+      <Link to="/coffee/:id">
+        <figure>
+          <img className="w-full h-48 overflow-hidden" src={image} alt="" />
+        </figure>
+      </Link>
 
       <div className="p-4 ">
         <h1 className="text-xl">Name: {name}</h1>
